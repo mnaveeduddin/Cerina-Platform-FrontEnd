@@ -3,6 +3,9 @@
     padding-left: 7px;
     background: rgb(212, 42, 93);
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
 

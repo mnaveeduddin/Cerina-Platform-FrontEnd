@@ -9,6 +9,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,7 @@ import { CareersComponent } from './components/careers/careers.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { InfoComponent } from './components/info/info.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import { InfoComponent } from './components/info/info.component';
     CareersComponent,
     ContactUsComponent,
     ConnectComponent,
-    InfoComponent
+    InfoComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,11 @@ import { InfoComponent } from './components/info/info.component';
     MatDividerModule,
     MatTableModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

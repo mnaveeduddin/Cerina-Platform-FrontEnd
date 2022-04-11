@@ -13,7 +13,7 @@ export class InfoComponent implements AfterViewInit {
 
   dataSource: any;
   
-  displayedColumns = ['id'];
+  displayedColumns = ['id', 'title', 'completed'];
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
   

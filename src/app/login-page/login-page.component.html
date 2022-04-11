@@ -1,0 +1,42 @@
+    <head>
+        <title>Cerina Log-In Page</title>
+    </head>
+    <body class="body">
+
+        <header class="logo">
+            <h1 id="CS"><img src="https://www.cerinastudio.com/wp-content/uploads/2020/01/header_logo.png"></h1>
+        </header>    
+
+        <div class="row">
+            <div class="col container item-1"> 
+                <p id="hcontent">Build your bot without any coding.</p>
+            </div>
+
+            <div class="col container item-2">
+                <form [formGroup]="loginForm" (ngSubmit)="transfer()" class="mainCS" name="myform">
+                    <div style="text-align: center;">
+                        <fa-icon [icon]="faLock" class="fa-3x"></fa-icon> 
+                   </div>
+                                      
+                    <label for="username"></label> 
+                    <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="username" formControlName="username" >
+                    <br><br>
+                   
+                    <label for="password"></label>
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Password"  formControlName="password">
+                    <br><br>
+   
+                    <button class="btn btn-outline-dark" type="submit" id="login"  ><b>Log In</b></button> 
+                    <br><br>
+   
+                    <input type="checkbox" name="RememberMe" id="RememberMe">
+                    <label for="RememberMe">Remember Me</label>
+   
+                    <a routerLink="../forgot-password" id="forgotpswrd">Create New Account</a>
+                    <br><br> 
+   
+                    <hr>
+                </form>       
+            </div>
+        </div>
+    </body>
