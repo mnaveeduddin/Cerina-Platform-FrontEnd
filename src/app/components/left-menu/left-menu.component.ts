@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { onSideNavChange, animateText } from 'src/app/animations/animations';
 import { SidenavService } from 'src/app/services/sidenav.service';
 
-interface Page{
-  link: string;
-  name: string;
-  icon: string;
-}
+// interface Page{
+//   link: string;
+//   name: string;
+//   icon: string;
+// }
 
 @Component({
   selector: 'app-left-menu',
@@ -19,11 +19,11 @@ export class LeftMenuComponent implements OnInit {
   public sideNavState: boolean = false;
   public linkText: boolean = false;
 
-  public pages: Page[] = [
-    {name: 'Inbox', link:'some-link', icon: 'inbox'},
-    {name: 'Starred', link:'some-link', icon: 'star'},
-    {name: 'Send email', link:'some-link', icon: 'send'},
-  ]
+  // public pages: Page[] = [
+  //   {name: 'Home', link:'/home', icon: 'inbox'},
+  //   {name: 'Starred', link:'some-link', icon: 'star'},
+  //   {name: 'Send email', link:'some-link', icon: 'send'},
+  // ]
 
   constructor(private _sidenavService: SidenavService) { }
 

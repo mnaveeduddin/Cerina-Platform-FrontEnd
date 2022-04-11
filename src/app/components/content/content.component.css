@@ -4,6 +4,7 @@ p {
   
   .main_content {
     width:100%; 
-    height: calc(100vh - 100px); 
+    /* height: 100vh; */
+    height: calc(100vh - 46px); 
     background: #efefef;
   }

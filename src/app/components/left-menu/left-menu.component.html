@@ -5,23 +5,78 @@
         <mat-nav-list>
           <a mat-list-item >
             <img class="jim" src="	https://qa.platform.xbotapps.com/flox_logo.61a9add9c12b8a03f8ec.png" 
-            alt="Cerina">
-            <!-- <span *ngFor="let page of pages" [@animateText]="linkText ? 'show' : 'hide'">{{ page.name }} </span> -->
+            alt="Cerina">&nbsp;&nbsp;
+            <span [@animateText]="linkText ? 'show' : 'hide'" style="font-weight: bolder;"> Welcome</span>
           </a>
         </mat-nav-list>
         <mat-divider></mat-divider>
       </div>
   
-      <div>
+      <!-- <div>
         <mat-nav-list>
-          <a mat-list-item *ngFor="let page of pages">
+          <a mat-list-item *ngFor="let page of pages" routerLink="/">
             <mat-icon style="padding-right:5px;">{{page.icon}}</mat-icon>
             <span [@animateText]="linkText ? 'show' : 'hide'">{{ page.name }} </span>
           </a>
         </mat-nav-list>
+      </div> -->
+
+
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="home">
+            <mat-icon style="padding-right:5px;">home</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Home</span>
+          </a>
+        </mat-nav-list>
       </div>
+      
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="service">
+            <mat-icon style="padding-right:5px;">build</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Services</span>
+          </a>
+        </mat-nav-list>
+      </div>
+      
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="careers">
+            <mat-icon style="padding-right:5px;">person</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Careers</span>
+          </a>
+        </mat-nav-list>
+      </div>
+      
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="contact-us">
+            <mat-icon style="padding-right:5px;">contacts</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Contact-Us</span>
+          </a>
+        </mat-nav-list>
+      </div>
+      
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="connect">
+            <mat-icon style="padding-right:5px;">devices</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Connect</span>
+          </a>
+        </mat-nav-list>
+      </div>
+      
+      <div>
+        <mat-nav-list>
+          <a mat-list-item routerLink="info">
+            <mat-icon style="padding-right:5px;">info</mat-icon>
+            <span [@animateText]="linkText ? 'show' : 'hide'"> Info</span>
+          </a>
+        </mat-nav-list>
+      </div>      
     </div>
-  
+    
     <!-- <span class="spacer"></span>
     <div fxLayout="row" fxLayoutAlign="end center" style="padding: 0px 10px;">
       <button mat-icon-button (click)="onSinenavToggle()">

@@ -1,25 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { LeftMenuComponent } from './components/left-menu/left-menu.component';
-import { ContentComponent } from './components/content/content.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LeftMenuComponent } from './components/left-menu/left-menu.component';
+import { ContentComponent } from './components/content/content.component';
+import { HomeComponent } from './components/home/home.component';
+import { ServiceComponent } from './components/service/service.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ConnectComponent } from './components/connect/connect.component';
+import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LeftMenuComponent,
-    ContentComponent
+    ContentComponent,
+    HomeComponent,
+    ServiceComponent,
+    CareersComponent,
+    ContactUsComponent,
+    ConnectComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +43,10 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule,
+    MatPaginatorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
