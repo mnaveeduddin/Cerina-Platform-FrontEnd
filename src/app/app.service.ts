@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class AppService {
   
   constructor() { }
 
-  setValue(token: string){
+  setValue(token: any){
     var array = JSON.parse(localStorage.getItem('Data') || '[]');
     array.push(token);
     localStorage.setItem('Data', JSON.stringify(array));
@@ -16,6 +17,14 @@ export class AppService {
   }
 
   getValue(){
-    return localStorage.getItem('Data')
+    return localStorage.getItem('Data');
+  }
+
+  setInfo(data: string){
+    localStorage.setItem('Info', JSON.stringify(data));
+  }
+
+  getInfo(){
+    return localStorage.getItem('Info');
   }
 }

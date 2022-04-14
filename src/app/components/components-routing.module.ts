@@ -7,6 +7,7 @@ import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { ServiceComponent } from './service/service.component';
+import { UserDataComponent } from './user-data/user-data.component';
 
 const routes: Routes = [
   {path: '', component: ContentComponent, children: [
@@ -16,7 +17,8 @@ const routes: Routes = [
     {path: 'careers', component: CareersComponent},
     {path: 'contact-us', component: ContactUsComponent},
     {path: 'connect', component: ConnectComponent},
-    {path: 'info', component: InfoComponent}
+    {path: 'info', component: InfoComponent},
+    {path: 'userData', component: UserDataComponent}
   ]}
 ];
 

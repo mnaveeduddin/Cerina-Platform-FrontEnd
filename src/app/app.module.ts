@@ -25,6 +25,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { ConnectComponent } from './components/connect/connect.component';
 import { InfoComponent } from './components/info/info.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { UserDataComponent } from './components/user-data/user-data.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     ContactUsComponent,
     ConnectComponent,
     InfoComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { onSideNavChange, animateText } from 'src/app/animations/animations';
 import { SidenavService } from 'src/app/services/sidenav.service';
+import { AppService } from 'src/app/app.service';
+
 
 // interface Page{
 //   link: string;
@@ -16,6 +18,8 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 })
 export class LeftMenuComponent implements OnInit {
 
+  data:string;
+
   public sideNavState: boolean = false;
   public linkText: boolean = false;
 
@@ -25,9 +29,10 @@ export class LeftMenuComponent implements OnInit {
   //   {name: 'Send email', link:'some-link', icon: 'send'},
   // ]
 
-  constructor(private _sidenavService: SidenavService) { }
+  constructor(private _sidenavService: SidenavService, private appservice: AppService) { }
 
   ngOnInit(): void {
+    this.data = this.appservice.getInfo();
   }
 
   onSinenavToggle() {

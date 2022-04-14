@@ -18,7 +18,7 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl('')
   });
 
-  username: any;
+  username:string = '';
 
   constructor(private router: Router, private appservice: AppService) { }
 
@@ -27,6 +27,7 @@ export class LoginPageComponent implements OnInit {
 
   transfer(){
     this.appservice.setValue(this.loginForm.value);
+    this.appservice.setInfo(this.username);
     this.router.navigate(['/components'])
   }
 }
