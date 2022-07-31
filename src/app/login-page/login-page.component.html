@@ -18,12 +18,30 @@
                         <fa-icon [icon]="faLock" class="fa-3x"></fa-icon> 
                    </div>
                                       
-                    <label for="username"></label> 
+                    <!-- <label for="username"></label> 
                     <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="username" formControlName="username" >
-                    <br><br>
+                    <br><br> -->
+
+                    <mat-form-field id="username" appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput [formControl]="username" placeholder="Ex. James" [(ngModel)]="usernameValue">
+                        <mat-error *ngIf="username.hasError('required')">
+                          Username is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
                    
-                    <label for="password"></label>
+                    <!-- <label for="password"></label>
                     <input class="form-control" type="password" id="password" name="password" placeholder="Password"  formControlName="password">
+                    <br><br> -->
+
+                    <mat-form-field id="password" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="text" matInput [formControl]="password">
+                        <mat-error *ngIf="password.hasError('required')">
+                          Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
                     <br><br>
    
                     <button class="btn btn-outline-dark" type="submit" id="login"  ><b>Log In</b></button> 

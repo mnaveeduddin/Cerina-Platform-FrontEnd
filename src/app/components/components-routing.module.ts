@@ -12,13 +12,13 @@ import { UserDataComponent } from './user-data/user-data.component';
 const routes: Routes = [
   {path: '', component: ContentComponent, children: [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'userData', component: UserDataComponent},
     {path: 'home', component: HomeComponent},
     {path: 'service', component: ServiceComponent},
     {path: 'careers', component: CareersComponent},
     {path: 'contact-us', component: ContactUsComponent},
     {path: 'connect', component: ConnectComponent},
-    {path: 'info', component: InfoComponent},
-    {path: 'userData', component: UserDataComponent}
+    {path: 'info', component: InfoComponent}
   ]}
 ];
 

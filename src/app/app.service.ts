@@ -21,7 +21,7 @@ export class AppService {
   }
 
   setInfo(data: string){
-    localStorage.setItem('Info', JSON.stringify(data));
+    localStorage.setItem('Info', data);
   }
 
   getInfo(){

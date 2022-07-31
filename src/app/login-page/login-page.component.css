@@ -54,23 +54,23 @@
 }
 
 #username{
-    padding: 13px 6px;
+    /* padding: 13px 6px;
     font-family: inherit;
     font-size: 14px;
     border-radius: 10px;
     border: 1px solid #918f91;
-    background-color: rgb(226, 199, 252);
+    background-color: rgb(226, 199, 252); */
     width: 100%;
 
 }
 
 #password{
-    padding: 13px 6px;
+    /* padding: 13px 6px;
     font-family: inherit;
     font-size: 14px;
     border-radius: 10px;
     border: 1px solid #90918f;
-    background-color: rgb(226, 199, 252);
+    background-color: rgb(226, 199, 252); */
     width: 100%;
 }
 
