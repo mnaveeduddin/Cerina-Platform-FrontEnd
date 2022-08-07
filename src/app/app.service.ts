@@ -13,6 +13,7 @@ export class AppService {
     var array = JSON.parse(localStorage.getItem('Data') || '[]');
     array.push(token);
     localStorage.setItem('Data', JSON.stringify(array));
+    console.log(localStorage.Data);
 
   }
 

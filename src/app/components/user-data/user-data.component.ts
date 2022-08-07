@@ -15,7 +15,11 @@ export class UserDataComponent implements OnInit {
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor() {
+    this.dataSource = new MatTableDataSource(localStorage.Data);
+    this.dataSource.paginator = this.paginator;
+    console.log(this.dataSource);
+   }
 
   ngOnInit(): void {
   }

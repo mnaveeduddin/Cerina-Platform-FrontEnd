@@ -13,15 +13,15 @@ export class LoginPageComponent implements OnInit {
 
   faLock = faLock;
 
-  username = new FormControl('', [Validators.required]);
-  password = new FormControl('', [Validators.required]);
+  // username = new FormControl('', [Validators.required]);
+  // password = new FormControl('', [Validators.required]);
 
   loginForm = new FormGroup({
     username: new FormControl(''),
     password: new FormControl('')
   });
 
-  usernameValue:string = '';
+  username:string = '';
 
   constructor(private router: Router, private appservice: AppService) { }
 
@@ -30,7 +30,7 @@ export class LoginPageComponent implements OnInit {
 
   transfer(){
     this.appservice.setValue(this.loginForm.value);
-    this.appservice.setInfo(this.usernameValue);
+    this.appservice.setInfo(this.username);
     this.router.navigate(['/components'])
   }
 }
