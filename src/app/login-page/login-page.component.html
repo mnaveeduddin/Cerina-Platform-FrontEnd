@@ -19,7 +19,7 @@
                    </div>
                                       
                     <label for="username"></label> 
-                    <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="username" formControlName="username" >
+                    <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="usernameData" formControlName="username" >
                     <br><br>
 
                     <!-- <mat-form-field id="username" appearance="fill">
@@ -32,7 +32,7 @@
                     <br> -->
                    
                     <label for="password"></label>
-                    <input class="form-control" type="password" id="password" name="password" placeholder="Password"  formControlName="password">
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Password" [(ngModel)]="passwordData" formControlName="password">
                     <br><br>
 
                     <!-- <mat-form-field id="password" appearance="fill">
