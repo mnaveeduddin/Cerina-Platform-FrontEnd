@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { AppService } from '../app.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-page',
@@ -13,36 +13,34 @@ import { HttpClient } from '@angular/common/http';
 export class LoginPageComponent implements OnInit {
 
   faLock = faLock;
-
-  // username = new FormControl('', [Validators.required]);
-  // password = new FormControl('', [Validators.required]);
-
-  loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('')
-  });
-
- 
-
-  usernameData:string = '';
-  passwordData:string = '';
+  hide = true;
+  username = new FormControl('', [Validators.required]);
+  password = new FormControl('', [Validators.required]);
+  credentials:any;
 
   constructor(private router: Router, private appservice: AppService, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  transfer(){
-    // this.appservice.setValue(this.loginForm.value);
-     let loginData = {
-    usernameData: this.usernameData,
-    passwordData: this.passwordData
-  }
-    this.appservice.setInfo(this.usernameData);
+  login(){
+    if(this.username.value && this.password.value){
+      let httpParams = new HttpParams().set("username",this.username.value)
+      this.http.get('http://localhost:8080/login', { params : httpParams}).subscribe((res) => {
+        // console.log(res);
+        this.credentials = res
+        if(this.credentials.password === this.password.value){
+          this.router.navigate(['/components'])
+          this.appservice.setInfo(this.username.value);
+        }else{
+          window.alert("Incorrect Password")
+        }
+      },(error) => {
+        window.alert("User Does Not Exist. Please Create Your Accont.");
+        // console.log(error);
+      }
+      )
+    }
 
-    this.http.post('http://localhost:8080/login', loginData).subscribe((res) => {
-      console.log(res);
-    })
-    this.router.navigate(['/components'])
-  }
+  };
 }

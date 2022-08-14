@@ -7,14 +7,22 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  apiUrl = 'https://jsonplaceholder.typicode.com/todos/'
-
   constructor(private http: HttpClient) { }
 
   getTodos(): Observable<todo[]>{
-    return this.http.get<todo[]>(this.apiUrl);
+    return this.http.get<todo[]>('https://jsonplaceholder.typicode.com/todos/');
   }
 
+  getUserData(): Observable<credentials[]>{
+    return this.http.get<credentials[]>('http://localhost:8080/usersInfo');
+  }
+}
+export interface credentials {
+  id: any,
+  username: string,
+  password: string,
+  createdAt:any,
+  updatedAt:any
 }
 
 export interface todo {

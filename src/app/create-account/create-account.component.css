@@ -54,7 +54,7 @@
 }
 
 #username{
-    padding: 13px 6px;
+    padding: 13px 6px 0px;
     font-size: 14px;
     border-radius: 10px;
     width: 100%;
@@ -65,7 +65,7 @@
 }
 
 #password{
-    padding: 13px 6px;
+    padding: 13px 6px 0px;
     font-size: 14px;
     border-radius: 10px;
     width: 100%;
