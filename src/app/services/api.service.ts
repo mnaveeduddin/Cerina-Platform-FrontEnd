@@ -21,6 +21,7 @@ export interface credentials {
   id: any,
   username: string,
   password: string,
+  email:string,
   createdAt:any,
   updatedAt:any
 }

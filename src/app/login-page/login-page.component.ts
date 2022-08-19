@@ -31,7 +31,7 @@ export class LoginPageComponent implements OnInit {
         this.credentials = res
         if(this.credentials.password === this.password.value){
           this.router.navigate(['/components'])
-          this.appservice.setInfo(this.username.value);
+          this.appservice.setInfo(this.credentials.username);
         }else{
           window.alert("Incorrect Password")
         }

@@ -29,6 +29,7 @@ import { InfoComponent } from './components/info/info.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserDataComponent } from './components/user-data/user-data.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     InfoComponent,
     LoginPageComponent,
     UserDataComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

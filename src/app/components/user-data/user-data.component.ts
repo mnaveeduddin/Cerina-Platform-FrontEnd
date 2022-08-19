@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { ApiService, credentials } from 'src/app/services/api.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-user-data',
@@ -9,10 +10,10 @@ import { ApiService, credentials } from 'src/app/services/api.service';
   styleUrls: ['./user-data.component.css']
 })
 export class UserDataComponent implements OnInit {
-
+  faTrash = faTrash
   dataSource: any;
   
-  displayedColumns = ['id'];
+  displayedColumns = ['id','username','email','delete'];
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -21,7 +22,7 @@ export class UserDataComponent implements OnInit {
     this.api.getUserData().subscribe( x => {
       this.dataSource = new MatTableDataSource<credentials>(x);
       this.dataSource.paginator = this.paginator;
-      console.log(this.dataSource);
+      // console.log(this.dataSource);
     })
    }
 

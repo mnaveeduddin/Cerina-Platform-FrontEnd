@@ -14,6 +14,7 @@ export class CreateAccountComponent implements OnInit {
   faUserPlus = faUserPlus;
   hide = true;
   username = new FormControl('', [Validators.required]);
+  email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
   reEnterpassword = new FormControl('',[Validators.required]);
 
@@ -25,14 +26,18 @@ export class CreateAccountComponent implements OnInit {
   createUserAccount(){
     let userData = {
       username: this.username.value,
-      password: this.password.value
+      password: this.password.value,
+      email: this.email.value
     }
-    if(this.username.value && this.password.value && this.reEnterpassword.value){
+    if(this.username.value && this.password.value && this.email.value && this.reEnterpassword.value){
       if(this.password.value === this.reEnterpassword.value){
         this.http.post('http://localhost:8080/createAccount', userData).subscribe((res) => {
-          console.log(res);
+          // console.log(res);
           window.alert("Account Created Successfully");
           this.router.navigate(['/login']);
+        },(error) => {
+          window.alert(error.error.message);
+          // console.log(error);
         })
       }else{
         window.alert("Passwords does not match");

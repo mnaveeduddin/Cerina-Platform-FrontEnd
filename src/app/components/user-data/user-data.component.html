@@ -1,18 +1,29 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
-      <!-- Username Column -->
+      <!-- Id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
   
-      <!-- Password Column -->
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef> Title </th>
-        <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+      <!-- Username Column -->
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
       </ng-container>
-    
+
+      <!-- CreatedAt Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> E-mail</th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef>Delete User</th>
+        <td mat-cell *matCellDef="let element"><fa-icon [icon]="faTrash" class="fa-1x"></fa-icon></td>
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

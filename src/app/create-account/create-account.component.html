@@ -25,6 +25,17 @@
                       Username is <strong>required</strong>
                     </mat-error>
                 </mat-form-field>
+
+                <mat-form-field id="username" appearance="fill">
+                    <mat-label>E-mail</mat-label>
+                    <input type="email" matInput [formControl]="email" placeholder="Ex. abc@xyz.com">
+                    <mat-error *ngIf="email.hasError('required')">
+                      E-mail is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('email')">
+                      Please enter <strong>correct e-mail address</strong>
+                    </mat-error>
+                </mat-form-field>
             
                 <mat-form-field id="password" appearance="fill">
                     <mat-label>Password</mat-label>

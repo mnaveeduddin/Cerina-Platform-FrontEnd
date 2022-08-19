@@ -22,7 +22,7 @@ export class InfoComponent implements AfterViewInit {
     this.api.getTodos().subscribe( x => {
       this.dataSource = new MatTableDataSource<todo>(x);
       this.dataSource.paginator = this.paginator;
-      console.log(this.dataSource);
+      // console.log(this.dataSource);
     })
   }
 
