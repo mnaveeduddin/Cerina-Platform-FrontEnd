@@ -22,9 +22,9 @@
                     <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="usernameData" formControlName="username" >
                     <br><br> -->
 
-                    <mat-form-field id="username" appearance="fill">
+                    <mat-form-field id="username" appearance="fill" [hideRequiredMarker]="hideRequiredMarker">
                         <mat-label>Username</mat-label>
-                        <input type="text" matInput [formControl]="username" placeholder="Ex. James">
+                        <input type="text" matInput [formControl]="username" required placeholder="Ex. James" autofocus maxlength="10">
                         <mat-error *ngIf="username.hasError('required')">
                           Username is <strong>required</strong>
                         </mat-error>

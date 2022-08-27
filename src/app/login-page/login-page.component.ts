@@ -14,6 +14,7 @@ export class LoginPageComponent implements OnInit {
 
   faLock = faLock;
   hide = true;
+  hideRequiredMarker = true;
   username = new FormControl('', [Validators.required]);
   password = new FormControl('', [Validators.required]);
   credentials:any;

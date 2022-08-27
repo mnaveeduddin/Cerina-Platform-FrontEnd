@@ -15,7 +15,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private _sideNavService: SidenavService) {
     this._sideNavService.sideNavState$.subscribe( res => {
-      console.log(res)
+      // console.log(res)
       this.onSideNavChange = res;
     })
    }
